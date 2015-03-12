@@ -32,7 +32,7 @@ public class Challenge {
         third = second.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));
         fourth = third.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));
         
-        if(fourth.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY)).isBefore(date.plusMonths(1))){
+        if(fourth.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY)).isBefore(fourth.with(TemporalAdjusters.firstDayOfNextMonth()))){
            fifth = fourth.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY)); 
         }
         else
